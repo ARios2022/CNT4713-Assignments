@@ -19,7 +19,8 @@ class Assignment2:
     def modifyYear(self, n):
         year_str = str(self.year)
         first_part = year_str[:2] * n
-        second_part = ''.join([year_str[i] for i in range(len(year_str)) if i % 3 == 1 or i % 3 == 2])
+        second_part = (''.join([year_str[i] for i in range(len(year_str)) if i % 4 == 3]) +
+                       ''.join([year_str[i] for i in range(len(year_str)) if i % 4 == 0]))
         return first_part + second_part
 
     # Task 5: Loop and Conditional statements
